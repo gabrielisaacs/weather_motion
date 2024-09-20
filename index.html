@@ -1,19 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Motion</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div id="weather-container">
-      <div id="weather-info">
-        <h1 id="city"></h1>
-        <p id="description"></p>
-        <p id="temperature"></p>
-        <p id="humidity"></p>
+    <div class="container">
+      <div class="sunny"></div>
+      <h1>Weather</h1>
+      <input type="text" id="locationInput" placeholder="Enter location" />
+      <button id="searchButton">Search</button>
+      <div id="weatherInfo">
+        <h2 id="locationName">Location</h2>
+        <p id="temperature">Temperature: --</p>
+        <p id="condition">Condition: --</p>
       </div>
-      <div id="motion-background"></div>
     </div>
     <script src="script.js"></script>
   </body>
