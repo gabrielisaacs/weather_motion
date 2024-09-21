@@ -1,39 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Meta tags for character encoding and viewport settings -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title of the webpage -->
     <title>Weather Motion</title>
+    <!-- Link to external CSS stylesheet -->
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- Header section with navigation menu -->
     <header id="home">
       <nav>
         <ul>
+          <!-- Navigation links -->
           <li class="navlink">
             <a href="#home">Home</a>
           </li>
-          <li class="navlink"></li>
+          <li class="navlink">
             <a href="#features">Features</a>
           </li>
-          <li class="navlink"></li>
+          <li class="navlink">
             <a href="#about">About</a>
           </li>
-          <li class="navlink"></li>
-            <a href="https://https://github.com/gabrielisaacs/weather-motion" target="_blank"><img src="./assets/github-icon-1-logo-svgrepo-com.svg" alt="github logo" class="github-logo"></a>
+          <li class="navlink">
+            <!-- Link to GitHub repository with an icon -->
+            <a
+              href="https://github.com/gabrielisaacs/weather-motion"
+              target="_blank"
+            >
+              <img
+                src="./assets/github-icon-1-logo-svgrepo-com.svg"
+                alt="github logo"
+                class="github-logo"
+              />
+            </a>
           </li>
         </ul>
       </nav>
     </header>
+
+    <!-- Main weather container section -->
     <div class="weather-container" id="home">
+      <!-- Placeholder for sunny weather animation -->
       <div class="sunny"></div>
+      <!-- Main heading for the weather section -->
       <h1 class="weather-text">Weather</h1>
+      <!-- Search input and button for location -->
       <div class="search-wrapper">
         <input type="text" id="locationInput" placeholder="Enter location" />
-        <button id="searchButton"><img src="./assets/search-svgrepo-com.svg" alt=""></button>
+        <button id="searchButton">
+          <img src="./assets/search-svgrepo-com.svg" alt="" />
+        </button>
       </div>
-        <div id="weatherInfo">
-        <h2 id="locationName" >Location</h2>
+      <!-- Container for displaying weather information -->
+      <div id="weatherInfo">
+        <h2 id="locationName">Location</h2>
         <div class="divider"></div>
         <p id="temperature">Temperature: --</p>
         <div class="divider"></div>
@@ -41,44 +64,77 @@
       </div>
     </div>
 
+    <!-- Divider between sections -->
     <div class="section-divider"></div>
 
+    <!-- Features section -->
     <div id="features">
       <h2 class="section-heading">Features</h2>
       <div class="text-grid">
+        <!-- Feature descriptions -->
         <div class="feature-info">
           <h3>Real-Time Weather Data</h3>
-          <p>Weather Motion fetches and displays accurate weather information, including temperature, humidity, and condition, for your current location.</p>
+          <p>
+            Weather Motion fetches and displays accurate weather information,
+            including temperature, humidity, and condition, for your current
+            location.
+          </p>
         </div>
         <div class="feature-info">
           <h3>Motion Backgrounds</h3>
-          <p>Experience weather-themed animations that change dynamically based on the current conditions, creating a visually engaging experience.</p>
+          <p>
+            Experience weather-themed animations that change dynamically based
+            on the current conditions, creating a visually engaging experience.
+          </p>
         </div>
         <div class="feature-info">
           <h3>User-Friendly Interface</h3>
-          <p>Weather Motion offers a simple and intuitive interface, making it easy to access and understand weather information.</p>
+          <p>
+            Weather Motion offers a simple and intuitive interface, making it
+            easy to access and understand weather information.
+          </p>
         </div>
       </div>
     </div>
 
+    <!-- Divider between sections -->
     <div class="section-divider"></div>
 
+    <!-- About section -->
     <div id="about">
       <h2 class="section-heading">About</h2>
       <p class="about-p">
-        Weather Motion was inspired by my passion for meteorology and my desire to create a visually appealing and informative weather application. While working on this project, I gained valuable experience in web development, API integration, and design.
+        Weather Motion was inspired by my passion for meteorology and my desire
+        to create a visually appealing and informative weather application.
+        While working on this project, I gained valuable experience in web
+        development, API integration, and design.
       </p>
+      <!-- Button linking to the project on GitHub -->
       <button id="projectButton">
-        <a href="http://github.com/gabrielisaacs/weather-motion" target="_blank" rel="noopener noreferrer"><span>View Project</span> <img src="./assets/github-icon-1-logo-svgrepo-com.svg" alt="github logo" class="github-logo"></a>
+        <a
+          href="http://github.com/gabrielisaacs/weather-motion"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span>View Project</span>
+          <img
+            src="./assets/github-icon-1-logo-svgrepo-com.svg"
+            alt="github logo"
+            class="github-logo"
+          />
+        </a>
       </button>
     </div>
 
+    <!-- Divider between sections -->
     <div class="section-divider"></div>
 
+    <!-- Footer section -->
     <footer>
       <p>&copy; 2024 Weather Motion. All rights reserved.</p>
     </footer>
 
+    <!-- Link to external JavaScript file -->
     <script src="script.js"></script>
   </body>
 </html>

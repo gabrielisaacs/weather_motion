@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const temperature = document.getElementById("temperature");
   const condition = document.getElementById("condition");
 
+  // Function to fetch weather data from the API
   function fetchWeather(location) {
     fetch(
       `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}&units=metric`
@@ -22,13 +23,15 @@ document.addEventListener("DOMContentLoaded", () => {
       .catch((error) => console.error("Error fetching weather data:", error));
   }
 
+  // Function to update the UI with fetched weather data
   function updateUI(data) {
     locationName.textContent = data.name;
     temperature.textContent = `Temperature: ${data.main.temp}°C`;
     condition.textContent = `Condition: ${data.weather[0].description}`;
-    // updateBackground(data.weather[0].main);
+    // updateBackground(data.weather[0].main); // Uncomment if background update is needed
   }
 
+  // Function to update the background based on weather condition
   function updateBackground(weatherCondition) {
     let backgroundUrl;
     switch (weatherCondition.toLowerCase()) {
@@ -50,6 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.style.backgroundImage = backgroundUrl;
   }
 
+  // Event listener for search button click
   searchButton.addEventListener("click", () => {
     const location = locationInput.value;
     if (location) {
@@ -57,17 +61,19 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // Event listener for Enter key press in the input field
   locationInput.addEventListener("keypress", (e) => {
     const location = locationInput.value;
-    if (e.key === "Enter" || e.type === "click") {
+    if (e.key === "Enter") {
       fetchWeather(location);
     }
   });
 
+  // Fetch weather for the last searched location or a default location
   const lastLocation = localStorage.getItem("lastLocation");
   if (lastLocation) {
     fetchWeather(lastLocation);
   } else {
-    fetchWeather(defaultLocation);
+    fetchWeather("defaultLocation"); // Replace "defaultLocation" with an actual default location
   }
 });

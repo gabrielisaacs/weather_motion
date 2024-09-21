@@ -1,3 +1,4 @@
+/* Apply box-sizing, margin, and padding reset to all elements */
 *,
 *::before,
 *::after {
@@ -218,6 +219,8 @@ footer>p {
     align-items: center;
     justify-content: center;
 }
+
+/* Styles for sunny and partly cloudy weather */
 
 .sunny,
 .partly_cloudy__sun {
