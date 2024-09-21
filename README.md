@@ -1,5 +1,6 @@
 # Weather Motion: A Dynamic Weather App ️☀️🌦️🌥️🌤️
 Weather Motion is a visually appealing and informative weather application that provides real-time weather data and engaging motion backgrounds.
+See LIve Project [here.](https://weathermo.vercel.app)
 
 ## Features:
 
@@ -12,12 +13,11 @@ User-Friendly Interface: The intuitive interface makes it easy to find and under
 ![Screenshot2](https://github.com/user-attachments/assets/11f120d3-a01f-4123-9540-fe0a682f78e7)
 ![Screenshot3](https://github.com/user-attachments/assets/117639fe-1234-43ca-bb26-472c096343ff)
 
-## Getting Started:
-Clone the repository: `git clone https://github.com/your-username/weather-motion`
-
+## Installation & Usage:
+Clone the repository: `git clone https://github.com/your-username/weather-motion`.
 And: `Have fun coding!` 😉
 
-## Technologies Used:
+### Technologies Used:
 - HTML
 - CSS
 - JavaScript
