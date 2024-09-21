@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     locationName.textContent = data.name;
     temperature.textContent = `Temperature: ${data.main.temp}°C`;
     condition.textContent = `Condition: ${data.weather[0].description}`;
-    updateBackground(data.weather[0].main);
+    // updateBackground(data.weather[0].main);
   }
 
   function updateBackground(weatherCondition) {
@@ -53,6 +53,13 @@ document.addEventListener("DOMContentLoaded", () => {
   searchButton.addEventListener("click", () => {
     const location = locationInput.value;
     if (location) {
+      fetchWeather(location);
+    }
+  });
+
+  locationInput.addEventListener("keypress", (e) => {
+    const location = locationInput.value;
+    if (e.key === "Enter" || e.type === "click") {
       fetchWeather(location);
     }
   });
